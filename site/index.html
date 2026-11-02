@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AirGap | Arbёr Avdullahu’s website</title>
+  <meta name="description" content="A free, open-source macOS menu-bar app that tracks screen time, blocks distracting apps and websites, and runs focus sessions. Everything stays on your Mac.">
+  <meta property="og:title" content="AirGap">
+  <meta property="og:description" content="A macOS menu-bar app that tracks screen time, blocks distracting apps and websites, and runs focus sessions. Everything stays on your Mac.">
+  <meta property="og:image" content="https://arberiii.github.io/air-gap/assets/screen-time.webp">
+  <meta property="og:site_name" content="Arbёr Avdullahu’s website">
+  <!-- The blog's own minima stylesheet, so this page always matches it. -->
+  <link rel="stylesheet" href="https://arberiii.github.io/assets/main.css">
+  <style>
+    .screenshots { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 15px; }
+    .screenshots figure { flex: 1 1 220px; margin: 0; }
+    .screenshots img { border-radius: 8px; }
+    figure.shot { max-width: 380px; margin: 0 0 15px; }
+    figure.shot img { border-radius: 8px; }
+    figcaption { font-size: 14px; color: #828282; margin-top: 5px; }
+  </style>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Arbёr Avdullahu&#39;s website</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/air-gap/">AirGap</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <article class="post">
+
+      <header class="post-header">
+        <h1 class="post-title">AirGap</h1>
+        <p class="post-meta">A macOS menu-bar app · free and open source · <a href="https://github.com/arberiii/air-gap">GitHub</a></p>
+      </header>
+
+      <div class="post-content">
+        <p>AirGap tracks your screen time, blocks distracting apps and websites, and runs focus sessions. It lives in the menu bar and runs in the background, so you don't have to remember to start tracking. There's no server, account or telemetry: everything stays on your Mac.</p>
+
+        <p><a href="#install">Install it</a> · <a href="https://github.com/arberiii/air-gap">Source code</a> · <a href="https://github.com/arberiii/air-gap/blob/main/ARCHITECTURE.md">How it works</a></p>
+
+        <div class="screenshots">
+          <figure><img src="assets/screen-time.webp" width="791" height="975" alt="Screen time view: 56 minutes today, a chart by hour and category, and the apps used most."><figcaption>Screen time</figcaption></figure>
+          <figure><img src="assets/block-list.webp" width="786" height="1062" alt="Block list with whole-site, exact-page and app rules."><figcaption>Block list</figcaption></figure>
+          <figure><img src="assets/focus.webp" width="782" height="1072" alt="Focus tab asking what you'll get done, with a length picker and a focus list."><figcaption>Focus session</figcaption></figure>
+        </div>
+
+        <h2>Features</h2>
+
+        <h3>Screen time</h3>
+        <p>See your time per app and per website, for today or the last 7 days, with a daily chart and how often you opened each one. Time stops counting after 2 minutes without input. You can export it as CSV from Settings.</p>
+
+        <h3>Block list</h3>
+        <p>Block a whole site (<code>youtube.com</code>, subdomains included), one page (<code>youtube.com/shorts</code>), or an app. Any rule can have a daily limit instead, so it only blocks once you've used up your minutes.</p>
+
+        <h3>Focus sessions</h3>
+        <p>Write what you'll get done, pick a length, and only the sites and apps on your focus list stay open. Each blocked item can be let through once per session for a quick check. A short check-in at the end asks how it went.</p>
+        <p><strong>Themes</strong> save a session you repeat (inbox triage, reading the news) with its length, checklist and focus list. <em>Reading</em> themes are a hard cap: no pausing and no quick checks.</p>
+
+        <h3>Commitment locks</h3>
+        <p>Lock a session, a theme or the block list for up to 30 days. While it's locked, Quit is hidden and the app relaunches if it's killed. The only way out is the one you chose up front: a 24-hour delay, or a code someone else holds.</p>
+        <figure class="shot"><img src="assets/lock.webp" width="784" height="1062" alt="Lock screen with lengths from 1 day to 30 days and a choice between a delay and a partner code."><figcaption>Locking the block list</figcaption></figure>
+
+        <h3>Assistant (optional)</h3>
+        <p>If you have <a href="https://claude.com/claude-code">Claude Code</a> or the <a href="https://github.com/openai/codex">Codex CLI</a> installed, AirGap can plan a session, reflect on it afterwards, summarize your screen time, sort apps into categories, and decide whether a blocked page is worth opening for the reason you type (up to 3 approved page passes a day).</p>
+
+        <h2 id="install">Install</h2>
+        <p>AirGap is built from source on your Mac and needs macOS 14 or later. You also need Apple's Command Line Tools, and <code>install.sh</code> offers to install them.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/arberiii/air-gap.git
+cd air-gap
+./install.sh
+</code></pre></div></div>
+        <p>This builds the app, copies it to <code>/Applications/AirGap.app</code> and opens it. To update, run <code>git pull &amp;&amp; ./install.sh</code>.</p>
+        <p>Websites are read and blocked in Safari, Chrome, Brave, Edge, Arc, Vivaldi and Opera. Firefox has no scripting interface, so it isn't supported. The first time AirGap reads a browser's tab, macOS asks for permission.</p>
+
+        <h2>Privacy</h2>
+        <p>Your data lives in <code>~/Library/Application Support/AirGap/state.json</code>. Only two things leave your Mac:</p>
+        <ul>
+          <li><strong>Favicons.</strong> Website icons in the screen time list come from Google's favicon service, which sees the host names of the sites you visit. They're cached locally.</li>
+          <li><strong>Assistant requests</strong>, only if you turn the assistant on. AirGap runs your own <code>claude</code> or <code>codex</code> CLI, which sends the prompt to Anthropic or OpenAI under your account.</li>
+        </ul>
+
+        <h2>Limits</h2>
+        <p>A lock is meant to hold against a tired self, not a determined one. Anyone with a terminal can unload the watchdog, edit <code>state.json</code> or move the clock forward. Browser tabs are polled every 2 seconds, so a blocked page can flash briefly before it's replaced.</p>
+
+        <p>AirGap is <a href="https://github.com/arberiii/air-gap/blob/main/LICENSE">MIT licensed</a>. Bugs and ideas go to <a href="https://github.com/arberiii/air-gap/issues">GitHub issues</a>.</p>
+      </div>
+
+    </article>
+  </div>
+</main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Arbёr Avdullahu&#39;s website</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Arbёr Avdullahu&#39;s website</li><li><a class="u-email" href="mailto:arbr.avdullahu@gmail.com">arbr.avdullahu@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/arberiii"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">arberiii</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>In my website you can find a variety of topics ranging from blockchain and go to aws and linux.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
