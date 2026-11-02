@@ -12,6 +12,8 @@
   <!-- The blog's own minima stylesheet, so this page always matches it. -->
   <link rel="stylesheet" href="https://arberiii.github.io/assets/main.css">
   <style>
+    /* minima doesn't set height: auto, so the width/height attributes would stretch the screenshots. */
+    .post-content img { height: auto; }
     .screenshots { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 15px; }
     .screenshots figure { flex: 1 1 220px; margin: 0; }
     .screenshots img { border-radius: 8px; }
